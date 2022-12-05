@@ -2,11 +2,13 @@ from chess2 import GenBoard, isInCheck, PrintBoard, GetPieceLegalMoves, isCheckm
 from chessPlayer import *
 from gametree import *
 import time
+import os
 
 #print and generate the board
 board = GenBoard()
 done=False
 while not(done):
+    
 	possible=False
 	while not(possible):
 		checked=isInCheck(board,10)
@@ -102,6 +104,6 @@ while not(done):
 		print("This is checkmate. Black wins!")
 		done=True
 		break
-
+	os.system("cls")
 
 # find ./ -type f -exec sed -i 's/\t/	/g' {} \;
