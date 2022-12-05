@@ -49,7 +49,6 @@ class MiniMax:
 		return minVal
 
 	def atBottom(self,node):
-		print(node.getChildren())
 		if(len(node.getChildren())==0):
 			return True
 		return False
